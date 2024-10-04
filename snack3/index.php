@@ -37,12 +37,15 @@ $db = [
     foreach ($db as $role => $people) {
         echo "<div class='$role'>";
         echo "<h3>" . ucfirst($role) . "</h3>";
+        echo "<ul>";
+
+        foreach ($people as $person) {
+            echo "<li>" . $person['name'] . " " . $person['lastname'] . "</li>";
+        }
+        echo "</ul>";
+        echo "</div>";
     }
     ?>
-
-
-
 </body>
-
 
 </html>
