@@ -29,7 +29,7 @@ $db = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Snack 3</title>
 </head>
 
 <body>
@@ -47,5 +47,18 @@ $db = [
     }
     ?>
 </body>
+<style>
+.teachers {
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.pm {
+    background-color: lightgreen;
+    padding: 10px;
+    margin: 10px 0;
+}
+</style>
 
 </html>
