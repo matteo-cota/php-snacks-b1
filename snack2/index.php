@@ -28,6 +28,15 @@
         $mail = $_GET['mail'];
         $age = $_GET['age'];
     }
+    if (strlen($name) <= 3) {
+        echo "Accesso negato: Il nome deve essere più lungo di 3 caratteri.";
+    } elseif (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+        echo "Accesso negato: L'email non è valida.";
+    } elseif (!is_numeric($age)) {
+        echo "Accesso negato: L'età deve essere un numero.";
+    } else {
+        echo "Accesso riuscito!";
+    }
     ?>
 
 </body>
