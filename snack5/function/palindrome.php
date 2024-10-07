@@ -1,7 +1,6 @@
 <?php
 function isPalindrome($input)
 {
-
     $cleanInput = '';
     $length = strlen($input);
     for ($i = 0; $i < $length; $i++) {
@@ -13,4 +12,17 @@ function isPalindrome($input)
             $cleanInput .= $char;
         }
     }
+
+    $reversedInput = '';
+    for ($j = strlen($cleanInput) - 1; $j >= 0; $j--) {
+        $reversedInput .= $cleanInput[$j];
+    }
+
+    return $cleanInput === $reversedInput;
+}
+
+if (isset($_GET['word'])) {
+    $word = $_GET['word'];
+    $isPalindrome = isPalindrome($word);
+    echo $isPalindrome ? "La parola/frase è un palindromo." : "La parola/frase non è un palindromo.";
 }
